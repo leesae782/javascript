@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step05_function2.html</title>
+</head>
+<body>
+    <h1>function type 테스트중 ...</h1>
+    <!-- 
+    
+    javascript 영역에서는 함수도 사물함영역에 만들어짐  참조값..
+    함수선언식  --- 함수가 위에서 이미 만들어짐
+
+    함수표현식  --- 함수가 위에서 만들어지지않고 순서가 있음
+
+                    ex)
+                        say();
+                        var say = function();  이건 호출안됨  함수를 만들기전에 함수를 호출하였기때문에
+    -->
+
+    <script>
+
+        //  function 타입이 참조되었다
+        function keepBeer(){
+        console.log("냉장고 문을연다.");
+        console.log("맥주를 넣는다.");
+        console.log("냉장고 문을 닫는다.");
+        }
+
+
+
+        //  함수 표현식 함수가 더 올바른 함수임.
+
+        var keepBeer2 = function(){
+        console.log("냉장고 문을연다.");
+        console.log("맥주를 넣는다.");
+        console.log("냉장고 문을 닫는다.");
+        };
+    </script>
+</body>
+</html>
