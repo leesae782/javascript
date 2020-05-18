@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step08_loop2.html</title>
+</head>
+<body>
+    <h1>반복함수 forEach() 테스트중 ... </h1>
+
+    <p>p1</p>
+    <p>p2</p>
+    <p>p3</p>
+    <p>p4</p>
+    <p>p5</p>
+
+    <button id ="printBtn">출력하기</button>
+    <script>
+        var names=["김구라","해골","원숭이","주뎅이","덩어리"];
+
+        // // names.push() 추가  slice 제거 length개수 , froeach()  함수 호출하면서 함수 전달하기
+        // //  배열의 사이즈만큼 알아서 전달해줌.
+        // names.forEach(function(item, index){
+        //     console.log(item+":"+index);
+        // });
+
+            
+        document.querySelector("#printBtn").addEventListener("click",function(){
+             names.forEach(function(a,index){  // 첫번쨰인자에는 item ,  두번쨰인자에는 index 순서가 정해져 있다.
+                document.querySelectorAll("p")[index].innerText = a;
+            })
+        });
+    </script>
+
+
+</body>
+</html>
