@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Step06_EventListener3.html</title>
+    <!--  뭐든요소.addEventListener("event name", function(){}) -->
+    <!-- click , mouseover,mousedown,mousedown,mousemove,mouseout,focus,blur,submit,keydown,keyup -->
+    <!-- event name -->
 </head>
 <style>
     .box{
@@ -27,6 +30,7 @@
        for (var i=0;i<divs.length;i++){
             divs[i].addEventListener("click",function(){
                 this.innerText = "clicked!";
+                //  this 는 
             });
        }
     </script>
