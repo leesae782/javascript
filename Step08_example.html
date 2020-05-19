@@ -25,29 +25,28 @@
 
         document.querySelector("#findBtn").addEventListener("click",function(){
             
+            var isExist = false ; 
            
             for(var i=0 ; i < friends.length; i++){
                 if(document.querySelector("#inputName").value == friends[i].name){
                     document.querySelector("#console").innerText = JSON.stringify(friends[i])
-                    document.querySelector("#inputName").value = ""  
-                    break;
+                    //검색된 이름이 존재한다고 표시 한다.
+                    isExist = true;
                 }  
-                
-                
-                else {
-                    document.querySelector("#console").innerText = "그런사람 없습니다."
-                }
-                
+                    
             }
-           
+            if(isExist==false){
+                document.querySelector("#console").innerText = "검색된 정보는 없습니다";
+            }  
             }
-            
-            
-            
+            //for 문 종료후에 if문 블럭에 실행순서가 갔었는지 여부를 알고싶다면??
+
+            );
             //  객체를  스트링 형태로 바꾸고 싶을떄    JSON.stringify(오브잭트이름)
-                
-        );
-        
+            
+
+
+            // 초기값을 정해놓고 설정
     </script>
 </body>
 </html>
